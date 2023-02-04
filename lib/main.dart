@@ -158,16 +158,16 @@ class _MyHomePageState extends State<MyHomePage> {
             title: Image.asset('assets/Logo/logo.png', height: 143)),
         body: Center(
             child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
+          mainAxisAlignment: MainAxisAlignment.start,
           children: [
-            const Text(
-              'Welcome to Wide',
-              style: TextStyle(
-                fontSize: 30,
-                fontWeight: FontWeight.bold,
-              ),
-            ),
-            const SizedBox(height: 30),
+            // const Text(
+            //   'Welcome to Wide',
+            //   style: TextStyle(
+            //     fontSize: 30,
+            //     fontWeight: FontWeight.bold,
+            //   ),
+            // ),
+            const SizedBox(height: 50),
             const Text('Top things to do here!',
                 style: const TextStyle(fontSize: 16)),
             const SizedBox(height: 10),
@@ -179,7 +179,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 25),
             ListTile(
               title: const Text('Click the button below'),
               subtitle: const Text('It will scan all your devices'),
@@ -188,7 +188,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 25),
             ListTile(
               title: const Text('Search for vulnerable ports'),
               subtitle: const Text('I will make it sure you :)'),
@@ -197,7 +197,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            const SizedBox(height: 10),
+            const SizedBox(height: 25),
             ListTile(
               title: const Text('Take Immediate Actions'),
               subtitle: const Text(

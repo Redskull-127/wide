@@ -60,29 +60,520 @@ class _DetailesPageState extends State<DetailesPage> {
                     itemCount: vulnArray.length,
                     itemBuilder: (BuildContext context, int index) {
                       if (vulnArray[index] == '80') {
-                        return Text('${vulnArray[index]} - HTTP');
+                        // return Text('${vulnArray[index]} - HTTP');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - HTTP',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 80 is the port number assigned to commonly used internet communication protocol, Hypertext Transfer Protocol (HTTP). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '443') {
-                        return Text('${vulnArray[index]} - HTTPS');
+                        // return Text('${vulnArray[index]} - HTTPS');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - HTTPS',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 443 is the port number assigned to commonly used internet communication protocol, Hypertext Transfer Protocol (HTTP) over Secure Socket Layer (SSL). It is the default network port used to send and receive encrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '8080') {
-                        return Text('${vulnArray[index]} - HTTP');
+                        // return Text('${vulnArray[index]} - HTTP');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - HTTP',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 8080 is the port number assigned to commonly used internet communication protocol, Hypertext Transfer Protocol (HTTP). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '8443') {
-                        return Text('${vulnArray[index]} - HTTPS');
+                        // return Text('${vulnArray[index]} - HTTPS');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - HTTPS',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 8443 is the port number assigned to commonly used internet communication protocol, Hypertext Transfer Protocol (HTTP) over Secure Socket Layer (SSL). It is the default network port used to send and receive encrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '445') {
-                        return Text('${vulnArray[index]} - SMB');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - SMB',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 445 is the port number assigned to commonly used internet communication protocol, Server Message Block (SMB). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '139') {
-                        return Text('${vulnArray[index]} - SMB');
+                        // return Text('${vulnArray[index]} - SMB');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - SMB',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 139 is the port number assigned to commonly used internet communication protocol, Server Message Block (SMB). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '137') {
-                        return Text('${vulnArray[index]} - SMB');
+                        // return Text('${vulnArray[index]} - SMB');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - SMB',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 137 is the port number assigned to commonly used internet communication protocol, Server Message Block (SMB). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '53') {
-                        return Text('${vulnArray[index]} - DNS');
+                        // return Text('${vulnArray[index]} - DNS');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - DNS',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 53 is the port number assigned to commonly used internet communication protocol, Domain Name System (DNS). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '25') {
-                        return Text('${vulnArray[index]} - SMTP');
+                        // return Text('${vulnArray[index]} - SMTP');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - SMTP',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 25 is the port number assigned to commonly used internet communication protocol, Simple Mail Transfer Protocol (SMTP). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '21') {
-                        return Text('${vulnArray[index]} - FTP');
+                        // return Text('${vulnArray[index]} - FTP');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - FTP',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 21 is the port number assigned to commonly used internet communication protocol, File Transfer Protocol (FTP). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '22') {
-                        return Text('${vulnArray[index]} - SSH');
+                        // return Text('${vulnArray[index]} - SSH');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - SSH',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 22 is the port number assigned to commonly used internet communication protocol, Secure Shell (SSH). It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray[index] == '23') {
-                        return Text('${vulnArray[index]} - Telnet');
+                        // return Text('${vulnArray[index]} - Telnet');
+                        return Container(
+                            padding: const EdgeInsets.all(5),
+                            child: Row(
+                              mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                              children: [
+                                Text(
+                                  '${vulnArray[index]} - Telnet',
+                                  style: const TextStyle(fontSize: 20),
+                                ),
+                                TextButton(
+                                    onPressed: () {
+                                      showDialog(
+                                          context: context,
+                                          builder: (BuildContext context) {
+                                            return AlertDialog(
+                                              title: const Text(
+                                                  'Vulnerability Details'),
+                                              content: ListView(
+                                                shrinkWrap: true,
+                                                children: const [
+                                                  Text(
+                                                      'Port 23 is the port number assigned to commonly used internet communication protocol, Telnet. It is the default network port used to send and receive unencrypted web pages.'),
+                                                ],
+                                              ),
+                                              actions: [
+                                                TextButton(
+                                                    onPressed: () {
+                                                      Navigator.of(context)
+                                                          .pop();
+                                                    },
+                                                    child: const Text('Close'))
+                                              ],
+                                            );
+                                          });
+                                    },
+                                    child: const Text(
+                                      'Read More',
+                                      style: TextStyle(color: Colors.purple),
+                                    ))
+                              ],
+                            ));
                       } else if (vulnArray.isEmpty) {
                         return const Text(
                             'Your device is Secured\n No vulnerable ports found');
@@ -158,8 +649,23 @@ class _DetailesPageState extends State<DetailesPage> {
         ),
         body: Center(
           child: Column(
-            mainAxisAlignment: MainAxisAlignment.center,
+            mainAxisAlignment: MainAxisAlignment.start,
             children: [
+              Container(
+                height: 150,
+                child: Padding(
+                    padding: const EdgeInsets.all(17),
+                    child: Column(
+                      mainAxisAlignment: MainAxisAlignment.center,
+                      children: const [
+                        Center(
+                            child: Text(
+                          "~ The quieter you become, the more you are able to hear...",
+                          style: TextStyle(color: Colors.purple, fontSize: 20),
+                        ))
+                      ],
+                    )),
+              ),
               ListTile(
                 title: const Text('IP Address :'),
                 subtitle: Text('$IP'),
@@ -202,11 +708,11 @@ class _DetailesPageState extends State<DetailesPage> {
                     ),
                     Text('Scanning Ports ... (Takes 10 Seconds))')
                   ]),
-                  duration: Duration(seconds: 10),
+                  duration: const Duration(seconds: 10),
                 ),
               );
 
-              Future.delayed(Duration(seconds: 10), () {
+              Future.delayed(const Duration(seconds: 10), () {
                 searchedDone(context);
               });
             },
