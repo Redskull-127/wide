@@ -1,3 +1,5 @@
+// @dart=2.9
+
 import 'dart:io';
 import 'package:flutter/material.dart';
 import 'package:arp_scanner/arp_scanner.dart';
@@ -5,6 +7,7 @@ import 'package:arp_scanner/device.dart';
 import 'DetailedPage.dart';
 import 'package:http/http.dart' as http;
 import 'AllowBadCRT.dart';
+import 'package:splashscreen/splashscreen.dart';
 
 void main() {
   HttpOverrides.global = MyHttpOverrides();
@@ -12,7 +15,7 @@ void main() {
 }
 
 class MyApp extends StatelessWidget {
-  const MyApp({super.key});
+  const MyApp({Key key}) : super(key: key);
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -22,13 +25,31 @@ class MyApp extends StatelessWidget {
         useMaterial3: true,
         brightness: Brightness.light,
       ),
-      home: const MyHomePage(title: 'Wide'),
+      // home: const MyHomePage(title: 'Wide'),
+      home: SplashScreenPage(),
+    );
+  }
+}
+
+class SplashScreenPage extends StatelessWidget {
+  const SplashScreenPage({Key key}) : super(key: key);
+
+  @override
+  Widget build(BuildContext context) {
+    return SplashScreen(
+      seconds: 3,
+      navigateAfterSeconds: const MyHomePage(title: 'Wide'),
+      backgroundColor: Colors.purple[100],
+      image: Image.asset('assets/Logo/logo.png'),
+      loadingText: const Text("Loading"),
+      photoSize: 120.0,
+      loaderColor: Colors.purple,
     );
   }
 }
 
 class MyHomePage extends StatefulWidget {
-  const MyHomePage({super.key, required this.title});
+  const MyHomePage({Key key, this.title}) : super(key: key);
 
   final String title;
 

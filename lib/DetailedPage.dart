@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'dart:io';
-import 'dart:math';
+// import 'dart:math';
 
 class DetailesPage extends StatefulWidget {
   final String ip;
