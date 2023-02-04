@@ -8,9 +8,11 @@ import 'DetailedPage.dart';
 import 'package:http/http.dart' as http;
 import 'AllowBadCRT.dart';
 import 'package:splashscreen/splashscreen.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 void main() {
   HttpOverrides.global = MyHttpOverrides();
+  WidgetsFlutterBinding.ensureInitialized();
   runApp(const MyApp());
 }
 
@@ -200,7 +202,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 10),
             ListTile(
               title: const Text('Click the button below'),
               subtitle: const Text('It will scan all your devices'),
@@ -209,7 +211,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 10),
             ListTile(
               title: const Text('Search for vulnerable ports'),
               subtitle: const Text('I will make it sure you :)'),
@@ -218,7 +220,7 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
-            const SizedBox(height: 25),
+            const SizedBox(height: 10),
             ListTile(
               title: const Text('Take Immediate Actions'),
               subtitle: const Text(
@@ -228,6 +230,25 @@ class _MyHomePageState extends State<MyHomePage> {
                 borderRadius: BorderRadius.circular(10),
               ),
             ),
+            const SizedBox(height: 40),
+            ListTile(
+              onTap: () async {
+                if (await canLaunchUrl(Uri.parse('https://wide.redskull.me'))) {
+                  await launchUrl(Uri.parse('https://wide.redskull.me'));
+                } else {
+                  throw 'Could not launch ';
+                }
+              },
+              title: const Text('Go to BLOG!!!'),
+              // ending icon
+              trailing: const Icon(Icons.arrow_forward_ios),
+              subtitle: const Text(
+                  'Keep yourself updated with the latest news and trends in the world of cybersecurity'),
+              tileColor: Colors.purple[100],
+              shape: RoundedRectangleBorder(
+                borderRadius: BorderRadius.circular(10),
+              ),
+            )
           ],
         )),
         floatingActionButton: Container(
